@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import '~bootstrap';
+@import '~bootstrap-vue';
+
+// A row that places content horizontally and allows wrapping
+.flex-wrap-row {
+  @extend .d-flex, .flex-row, .flex-wrap;
+}
+// Adds centering to the above
+.flex-wrap-row-centered {
+  @extend .flex-wrap-row, .align-items-center, .justify-content-center
+}
