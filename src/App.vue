@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <IntroSection class="portfolio-section"/>
-    <AboutMeSection class="portfolio-section"/>
-    <ExperienceSection class="portfolio-section"/>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+<!--TODO: Can create a section wrapper-->
+    <IntroSection class="portfolio-section" data-aos="fade-up"/>
+    <AboutMeSection class="portfolio-section" data-aos="fade-up"/>
+    <ExperienceSection class="portfolio-section" data-aos="fade-up"/>
+    <ProjectsSection class="portfolio-section" data-aos="fade-up"/>
+    <ContactSection class="portfolio-section" data-aos="fade-up"/>
+    <FooterSection/>
   </div>
 </template>
 
@@ -14,7 +16,11 @@ import IntroSection from '@/sections/IntroSection.vue';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import AboutMeSection from '@/sections/AboutMeSection.vue';
 import ExperienceSection from '@/sections/ExperienceSection.vue';
-import HelloWorld from './components/HelloWorld.vue';
+import ProjectsSection from '@/sections/ProjectsSection.vue';
+import ContactSection from '@/sections/ContactSection.vue';
+import FooterSection from '@/sections/FooterSection.vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Install BootstrapVue
 Vue.use(BootstrapVue);
@@ -23,10 +29,15 @@ Vue.use(IconsPlugin);
 
 @Component({
   components: {
+    FooterSection,
+    ContactSection,
     ExperienceSection,
     AboutMeSection,
-    HelloWorld,
     IntroSection,
+    ProjectsSection,
+  },
+  created() {
+    AOS.init();
   },
 })
 export default class App extends Vue {}
