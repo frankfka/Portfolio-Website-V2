@@ -4,18 +4,18 @@
       <h1>Hi! I'm <span id="intro-name">{{ name }}</span>.</h1>
       <h3 id="intro-key-phrase">{{ keyPhrase }}</h3>
     </div>
-    <div class="intro-profiles flex-wrap-row-centered">
+    <BRow align-v="center" align-h="center" class="intro-profiles">
       <ProfileIconLink
         v-bind="profile" v-for="profile in profiles" :key="profile.url"
         class="mx-3"
       />
-    </div>
-    <div class="intro-buttons flex-wrap-row-centered">
+    </BRow>
+    <BRow align-v="center" align-h="center" class="intro-buttons">
       <BaseButton
         v-bind="cta" v-for="cta in ctas" :key="cta.href"
         class="mx-3"
       />
-    </div>
+    </BRow>
   </div>
 </template>
 

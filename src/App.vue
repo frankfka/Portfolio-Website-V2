@@ -44,16 +44,6 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Roboto Mono', 'Courier New', monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-a {
-  text-decoration: none;
-  /*TODO: Animation on hover*/
-}
 .portfolio-section {
   @extend .container-fluid;
   padding: 6em;

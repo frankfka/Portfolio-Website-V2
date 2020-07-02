@@ -1,8 +1,10 @@
 <template>
-  <a :href="url" class="profile-icon-link flex-wrap-row-centered">
-    <img class="profile-icon-link-img" :src="profileIcon" alt="TODO">
-    <p class="profile-icon-link-name">{{ name }}</p>
-  </a>
+    <a :href="url" class="profile-icon-link text-link">
+      <BRow no-gutters align-v="center">
+        <img class="profile-icon-link-img" :src="profileIcon" alt="TODO">
+        <p class="profile-icon-link-name">{{ name }}</p>
+      </BRow>
+    </a>
 </template>
 
 <script>
@@ -29,13 +31,11 @@ export default {
 };
 </script>
 
-<style scoped>
-.profile-icon-link {
-  color: dimgray;
-}
+<style scoped lang="scss">
+@include text-link($color-text-light);
 .profile-icon-link-img {
   width: 1em;
   height: 1em;
-  margin: 0.5em;
+  margin-right: 0.5em;
 }
 </style>
