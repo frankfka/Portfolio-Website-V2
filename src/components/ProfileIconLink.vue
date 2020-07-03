@@ -1,19 +1,25 @@
 <template>
     <a :href="url" class="profile-icon-link text-link">
       <BRow no-gutters align-v="center">
-        <img class="profile-icon-link-img" :src="profileIcon" alt="TODO">
+        <FontAwesomeIcon :icon="profileIcon" class="profile-icon-link-img"></FontAwesomeIcon>
         <p class="profile-icon-link-name">{{ name }}</p>
       </BRow>
     </a>
 </template>
 
 <script>
-import EmailIcon from '@/assets/profiles/email.svg';
-import PhoneIcon from '@/assets/profiles/phone.svg';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faMedium, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faGithub, faEnvelope, faMedium, faLinkedin);
 
 const IconLinkToAsset = {
-  email: EmailIcon,
-  phone: PhoneIcon,
+  email: faEnvelope,
+  github: faGithub,
+  medium: faMedium,
+  linkedin: faLinkedin,
 };
 
 export default {
@@ -28,14 +34,15 @@ export default {
       return IconLinkToAsset[this.iconName];
     },
   },
+  components: {
+    FontAwesomeIcon,
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @include text-link($color-text-light);
 .profile-icon-link-img {
-  width: 1em;
-  height: 1em;
-  margin-right: 0.5em;
+  margin-right: 0.2em;
 }
 </style>

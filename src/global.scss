@@ -13,6 +13,7 @@ $color-primary: #F57C00;
 $color-primary-dark: #E65100;
 $color-text: #212121;
 $color-text-light: #616161;
+$color-text-white: #FFF;
 
 // Global styles
 body {
@@ -21,10 +22,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $color-text;
 }
+.primary-color {
+  color: $color-primary;
+}
+.light-text-color {
+  color: $color-text-light
+}
 a, a:hover, a:active, a:focus {
   text-decoration: none;
   outline: none;
 }
+// Mixin for text link hover effect
 @mixin text-link($default-text-color: $color-primary, $hover-text-color: $color-primary-dark) {
   a {
     $link-transition: all 0.25s ease 0.05s;

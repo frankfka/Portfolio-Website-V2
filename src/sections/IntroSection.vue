@@ -1,17 +1,19 @@
 <template>
-  <div class="intro-section text-center">
-    <div class="intro-header-text">
-      <h1>Hi! I'm <span id="intro-name">{{ name }}</span>.</h1>
-      <h3 id="intro-key-phrase">{{ keyPhrase }}</h3>
+  <div class="text-center">
+    <div class="text-center">
+      <h1 class="mb-3">Hi! I'm {{ name }}.</h1>
+      <h3 class="mb-3 primary-color">{{ keyPhrase }}</h3>
+      <p class="mb-3 light-text-color" id="intro-summary">{{ summary }}</p>
     </div>
-    <BRow align-v="center" align-h="center" class="intro-profiles">
+    <BRow align-v="center" align-h="center" class="mb-3">
       <ProfileIconLink
         v-bind="profile" v-for="profile in profiles" :key="profile.url"
         class="mx-3"
       />
     </BRow>
-    <BRow align-v="center" align-h="center" class="intro-buttons">
+    <BRow align-v="center" align-h="center">
       <BaseButton
+        outlined
         v-bind="cta" v-for="cta in ctas" :key="cta.href"
         class="mx-3"
       />
@@ -29,32 +31,29 @@ export default {
   data() {
     return {
       name: 'Frank Jia',
-      keyPhrase: 'Business minded engineer & fitness enthusiast.',
+      keyPhrase: 'I\'m a business-minded full-stack software engineer.',
+      summary: 'As a engineering student based in Vancouver, Canada, I have developed and maintained both frontend and backend production software. '
+        + 'Outside of work, I am a fitness enthusiast passionate about maintaining an active and healthy lifestyle.',
       profiles: [
+        {
+          iconName: 'github',
+          name: 'frankfka',
+          url: 'https://github.com/frankfka',
+        },
+        {
+          iconName: 'linkedin',
+          name: 'jiafrank',
+          url: 'https://www.linkedin.com/in/jiafrank/',
+        },
+        {
+          iconName: 'medium',
+          name: 'frankjia',
+          url: 'https://medium.com/@frankjia',
+        },
         {
           iconName: 'email',
           name: 'jiafrank98@gmail.com',
-          url: '',
-        },
-        {
-          iconName: 'phone',
-          name: '+1-778-384-9871',
-          url: '',
-        },
-        {
-          iconName: 'phone',
-          name: '+1-778-384-9871',
-          url: '',
-        },
-        {
-          iconName: 'phone',
-          name: '+1-778-384-9871',
-          url: '',
-        },
-        {
-          iconName: 'phone',
-          name: '+1-778-384-9871',
-          url: '',
+          url: 'mailto:jiafrank98@gmail.com',
         },
       ],
       ctas: [
@@ -74,7 +73,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#intro-key-phrase {
-  color: darkorange;
+#intro-summary {
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    padding: 0 10%;
+  }
 }
 </style>

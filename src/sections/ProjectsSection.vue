@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="w-100">
   <h2 class="text-center">Projects</h2>
   <BCard
     v-for="(project, index) in projects" :key="index"

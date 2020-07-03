@@ -1,5 +1,11 @@
 <template>
-  <BButton class="base-button" :size="size" :href="href">{{ label }}</BButton>
+  <BButton
+    :class="outlined ? 'base-button-outline' : 'base-button-fill'"
+    :size="size"
+    :href="href"
+  >
+    {{ label }}
+  </BButton>
 </template>
 
 <script>
@@ -12,16 +18,44 @@ export default {
       type: String,
       default: '',
     },
+    outlined: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
 
-<style scoped>
-.base-button, .base-button:hover, .base-button:active, .base-button:visited {
-  background-color: orange !important;
-  border: none !important;
-}
-.base-button:hover {
-  background-color: darkorange !important;
-}
+<style scoped lang="scss">
+  $border-style: 1px solid;
+
+  // Filled
+  .base-button-fill, .base-button-fill:hover, .base-button-fill:active, .base-button-fill:visited {
+    background-color: $color-primary !important;
+    border: $color-primary $border-style !important;
+  }
+
+  .base-button-fill {
+    color: $color-text-white !important;
+  }
+
+  .base-button-fill:hover {
+    background-color: $color-primary-dark !important;
+  }
+
+  // Outline
+  .base-button-outline, .base-button-outline:hover,
+  .base-button-outline:active, .base-button-outline:visited {
+    background-color: transparent !important;
+    border: $color-primary $border-style !important;
+  }
+
+  .base-button-outline {
+    color: $color-primary !important;
+  }
+
+  .base-button-outline:hover {
+    background-color: $color-primary-dark !important;
+    color: $color-text-white !important;
+  }
 </style>

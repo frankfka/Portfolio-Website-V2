@@ -1,11 +1,20 @@
 <template>
   <div id="app">
-<!--TODO: Can create a section wrapper-->
-    <IntroSection class="portfolio-section" data-aos="fade-up"/>
-    <AboutMeSection class="portfolio-section" data-aos="fade-up"/>
-    <ExperienceSection class="portfolio-section" data-aos="fade-up"/>
-    <ProjectsSection class="portfolio-section" data-aos="fade-up"/>
-    <ContactSection class="portfolio-section" data-aos="fade-up"/>
+    <PortfolioSection>
+      <IntroSection data-aos="fade-up"/>
+    </PortfolioSection>
+    <PortfolioSection>
+      <AboutMeSection data-aos="fade-up"/>
+    </PortfolioSection>
+    <PortfolioSection>
+      <ExperienceSection data-aos="fade-up"/>
+    </PortfolioSection>
+    <PortfolioSection>
+      <ProjectsSection data-aos="fade-up"/>
+    </PortfolioSection>
+    <PortfolioSection>
+      <ContactSection data-aos="fade-up"/>
+    </PortfolioSection>
     <FooterSection/>
   </div>
 </template>
@@ -21,6 +30,7 @@ import ContactSection from '@/sections/ContactSection.vue';
 import FooterSection from '@/sections/FooterSection.vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import PortfolioSection from '@/components/PortfolioSection.vue';
 
 // Install BootstrapVue
 Vue.use(BootstrapVue);
@@ -29,6 +39,7 @@ Vue.use(IconsPlugin);
 
 @Component({
   components: {
+    PortfolioSection,
     FooterSection,
     ContactSection,
     ExperienceSection,
@@ -44,8 +55,4 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-.portfolio-section {
-  @extend .container-fluid;
-  padding: 6em;
-}
 </style>
