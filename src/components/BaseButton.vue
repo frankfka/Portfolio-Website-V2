@@ -3,6 +3,7 @@
     :class="outlined ? 'base-button-outline' : 'base-button-fill'"
     :size="size"
     :href="href"
+    target="_blank"
   >
     {{ label }}
   </BButton>

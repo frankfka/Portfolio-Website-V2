@@ -32,7 +32,7 @@ export default {
     return {
       name: 'Frank Jia',
       keyPhrase: 'I\'m a business-minded full-stack software engineer.',
-      summary: 'As a engineering student based in Vancouver, Canada, I have developed and maintained both frontend and backend production software. '
+      summary: 'As an engineering student based in Vancouver, Canada, I have developed and maintained both frontend and backend production software. '
         + 'Outside of work, I am a fitness enthusiast passionate about maintaining an active and healthy lifestyle.',
       profiles: [
         {

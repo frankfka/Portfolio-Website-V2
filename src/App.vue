@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <PortfolioSection>
-      <IntroSection data-aos="fade-up"/>
-    </PortfolioSection>
-    <PortfolioSection>
-      <AboutMeSection data-aos="fade-up"/>
-    </PortfolioSection>
-    <PortfolioSection>
-      <ExperienceSection data-aos="fade-up"/>
-    </PortfolioSection>
-    <PortfolioSection>
-      <ProjectsSection data-aos="fade-up"/>
-    </PortfolioSection>
-    <PortfolioSection>
-      <ContactSection data-aos="fade-up"/>
-    </PortfolioSection>
+    <PortfolioSectionWrapper>
+      <IntroSection/>
+    </PortfolioSectionWrapper>
+    <PortfolioSectionWrapper>
+      <AboutMeSection/>
+    </PortfolioSectionWrapper>
+    <PortfolioSectionWrapper>
+      <ExperienceSection/>
+    </PortfolioSectionWrapper>
+    <PortfolioSectionWrapper>
+      <ProjectsSection/>
+    </PortfolioSectionWrapper>
+    <PortfolioSectionWrapper>
+      <ContactSection/>
+    </PortfolioSectionWrapper>
     <FooterSection/>
   </div>
 </template>
@@ -30,7 +30,7 @@ import ContactSection from '@/sections/ContactSection.vue';
 import FooterSection from '@/sections/FooterSection.vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import PortfolioSection from '@/components/PortfolioSection.vue';
+import PortfolioSectionWrapper from '@/components/PortfolioSectionWrapper.vue';
 
 // Install BootstrapVue
 Vue.use(BootstrapVue);
@@ -39,7 +39,7 @@ Vue.use(IconsPlugin);
 
 @Component({
   components: {
-    PortfolioSection,
+    PortfolioSectionWrapper,
     FooterSection,
     ContactSection,
     ExperienceSection,

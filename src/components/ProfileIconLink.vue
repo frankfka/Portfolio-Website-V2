@@ -1,5 +1,5 @@
 <template>
-    <a :href="url" class="profile-icon-link text-link">
+    <a :href="url" class="profile-icon-link text-link" target="_blank">
       <BRow no-gutters align-v="center">
         <FontAwesomeIcon :icon="profileIcon" class="profile-icon-link-img"></FontAwesomeIcon>
         <p class="profile-icon-link-name">{{ name }}</p>

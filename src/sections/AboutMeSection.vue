@@ -1,17 +1,19 @@
 <template>
   <div>
-    <BRow class="about-me-section" align-v="center">
-      <BCol md="6" order="2" order-md="1">
-        <h2 class="text-center text-md-left">About Me</h2>
-        <div v-html="summary"/>
-        <div class="highlights">
+    <BRow id="about-me-section" align-v="center" align-h="center">
+      <!--Column for text info-->
+      <BCol cols="12" md="6" xl="8" order="2" order-md="1" id="about-me-text">
+        <h2 class="text-center text-md-left mb-3">About Me</h2>
+        <div v-html="summary" class="mb-3 about-me-text-summary"/>
+        <div class="highlights mb-3">
           <ul>
             <li v-for="highlight in highlights"
                 :key="highlight" is="base-list-item">{{ highlight }}</li>
           </ul>
         </div>
       </BCol>
-      <BCol md="6" order="1" order-md="2" class="text-center">
+      <!--Column for face image-->
+      <BCol cols="6" xl="4" order="1" order-md="2" class="text-center my-5">
         <img :src="profileImage" alt="Profile Photo" class="img-fluid about-me-profile-img">
       </BCol>
     </BRow>
@@ -54,11 +56,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
+#about-me-text {
+  @include text-link();  // v-html does not work with scoped style
+}
+</style>
+<style scoped lang="scss">
 ul {
   padding-left: 1em;
-}
-.about-me-profile-img {
-  max-width: 80%;
 }
 </style>
