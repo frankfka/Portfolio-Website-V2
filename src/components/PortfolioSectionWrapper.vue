@@ -15,12 +15,12 @@ export default {
   min-height: 90vh;
   display: flex;
   align-items: center;
-  padding: 0 5%;
+  padding: 5vh 5vw;
   @media (min-width: map-get($grid-breakpoints, lg)) {
-    padding: 0 10%;
+    padding: 10vh 10vw;
   }
   @media (min-width: map-get($grid-breakpoints, xl)) {
-    padding: 0 15%;
+    padding: 15vh 15vw;
   }
 }
 </style>
