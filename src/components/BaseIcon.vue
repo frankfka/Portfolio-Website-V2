@@ -5,16 +5,24 @@
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faMedium, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGithub, faMedium, faLinkedin, faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
 
-library.add(faGithub, faEnvelope, faMedium, faLinkedin);
+library.add(
+  faGithub, faEnvelope,
+  faMedium, faLinkedin,
+  faYoutube, faExternalLinkAlt,
+);
 
 const IconLinkToAsset = {
   email: faEnvelope,
   github: faGithub,
   medium: faMedium,
   linkedin: faLinkedin,
+  youtube: faYoutube,
+  generic: faExternalLinkAlt,
 };
 
 export default {

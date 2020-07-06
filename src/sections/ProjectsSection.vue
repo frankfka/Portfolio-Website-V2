@@ -29,13 +29,11 @@
       <div v-html="project.description" class="mb-3"/>
       <!--Associated links-->
       <BRow no-gutters align-h="end" align-v="center" id="project-icon-links">
-        <a
+        <IconLink
           v-for="link in project.links" :key="link.url"
-          :href="link.url" target="_blank"
+          :href="link.url" :icon-name="link.iconName"
           class="project-icon-link ml-3"
-        >
-          <BaseIcon :icon-name="link.iconName"/>
-        </a>
+        />
       </BRow>
     </BCollapse>
   </BCard>
@@ -49,11 +47,11 @@
 <script>
 import BetterplateLogo from '@/assets/projects/betterplate-logo.png';
 import BaseButton from '@/components/BaseButton.vue';
-import BaseIcon from '@/components/BaseIcon.vue';
+import IconLink from '@/components/IconLink.vue';
 
 export default {
   name: 'ProjectsSection',
-  components: { BaseIcon, BaseButton },
+  components: { IconLink, BaseButton },
   methods: {
     getKeywordsDescription(project) {
       return project.keywords.join(', ');
