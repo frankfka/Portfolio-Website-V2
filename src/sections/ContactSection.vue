@@ -1,7 +1,7 @@
 <template>
   <div class="text-center">
-    <h2>Let's Connect</h2>
-    <p>
+    <h2 class="mb-3">Let's Connect</h2>
+    <p id="connect-section-description" class="mb-3">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       Ipsum has been the industry's standard dummy text ever since the 1500s,
       when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -9,8 +9,11 @@
       remaining essentially unchanged.
     </p>
     <BRow align-v="center" align-h="center">
-      <BaseButton label="Email" href="" size="lg"/>
-      <BaseButton label="LinkedIn" href="" size="lg"/>
+      <BaseButton
+        outlined size="lg" class="mx-3"
+        v-for="contact in contactLinks" :key="contact.url"
+        :label="contact.label" :href="contact.url"
+      />
     </BRow>
   </div>
 </template>
@@ -21,9 +24,27 @@ import BaseButton from '../components/BaseButton.vue';
 export default {
   name: 'ContactSection',
   components: { BaseButton },
+  data() {
+    return {
+      contactLinks: [
+        {
+          label: 'Email',
+          url: 'asd',
+        },
+        {
+          label: 'LinkedIn',
+          url: 'saf',
+        },
+      ],
+    };
+  },
 };
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+#connect-section-description {
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    padding: 0 10%;
+  }
+}
 </style>
