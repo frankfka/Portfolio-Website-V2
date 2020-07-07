@@ -2,7 +2,7 @@
   <BButton
     :class="outlined ? 'base-button-outline' : 'base-button-fill'"
     :size="size"
-    :href="href"
+    :href="url"
     target="_blank"
   >
     {{ label }}
@@ -14,7 +14,7 @@ export default {
   name: 'BaseButton',
   props: {
     label: String,
-    href: String,
+    url: String,
     size: {
       type: String,
       default: '',

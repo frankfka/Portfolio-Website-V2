@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <PortfolioSectionWrapper>
-      <IntroSection/>
+      <IntroSection v-bind="introSectionData"/>
     </PortfolioSectionWrapper>
     <PortfolioSectionWrapper>
-      <AboutMeSection/>
+      <AboutMeSection v-bind="aboutMeSectionData"/>
     </PortfolioSectionWrapper>
     <PortfolioSectionWrapper>
       <ExperienceSection/>
@@ -19,8 +19,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+<script>
+import AppData from '@/assets/data/all-data';
+import { Vue } from 'vue-property-decorator';
 import IntroSection from '@/sections/IntroSection.vue';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import AboutMeSection from '@/sections/AboutMeSection.vue';
@@ -37,7 +38,30 @@ Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
 
-@Component({
+export default {
+  data() {
+    return {
+      appData: AppData,
+    };
+  },
+  computed: {
+    introSectionData() {
+      const profileData = this.appData.profile;
+      return {
+        name: profileData.name,
+        keyPhrase: profileData.keyPhrase,
+        summary: profileData.summary,
+        socialProfiles: profileData.profiles,
+        ctas: profileData.ctas,
+      };
+    },
+    aboutMeSectionData() {
+      return {
+        personalProfile: this.appData.profile.personalProfile,
+        highlights: this.appData.profile.highlights,
+      };
+    },
+  },
   components: {
     PortfolioSectionWrapper,
     FooterSection,
@@ -50,8 +74,7 @@ Vue.use(IconsPlugin);
   created() {
     AOS.init();
   },
-})
-export default class App extends Vue {}
+};
 </script>
 
 <style lang="scss">
