@@ -9,7 +9,7 @@
     <!--Row of social profile icons-->
     <BRow align-v="center" align-h="center" class="mb-3">
       <ProfileIconLink
-        v-bind="profile" v-for="profile in profiles" :key="profile.url"
+        v-bind="profile" v-for="profile in socialProfiles" :key="profile.url"
         class="mx-3"
       />
     </BRow>

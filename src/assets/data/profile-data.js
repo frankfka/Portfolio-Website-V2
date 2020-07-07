@@ -1,5 +1,8 @@
+import ProfileImage from '@/assets/personal-image.png';
+
 export default {
   name: 'Frank Jia',
+  profileImage: ProfileImage,
   keyPhrase: 'I\'m a business-minded full-stack software engineer.',
   summary: 'As an engineering student based in Vancouver, Canada, I have developed and maintained both frontend and backend production software. Outside of work, I am a fitness enthusiast passionate about maintaining an active and healthy lifestyle.',
   personalProfile: `
@@ -43,15 +46,6 @@ export default {
       iconName: 'email',
       name: 'jiafrank98@gmail.com',
       url: 'mailto:jiafrank98@gmail.com',
-    },
-  ],
-  ctas: [
-    {
-      label: 'Contact',
-      url: 'mailto:jiafrank98@gmail.com',
-    }, {
-      label: 'Resume',
-      url: 'assets/frank-jia-resume.pdf',
     },
   ],
 };

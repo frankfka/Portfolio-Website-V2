@@ -1,0 +1,58 @@
+export default [
+  {
+    company: 'SAP Concur',
+    position: 'Software Engineer Intern',
+    website: 'https://www.concur.ca/',
+    startDate: 'May 2019',
+    endDate: 'Dec 2019',
+    summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+    highlights: [
+      'Optimized the existing code base and introduced new product features to enhance the efficiency and value proposition of our core product',
+      'Developed expertise in Java for enterprise applications with over 1000+ individual contributions and 75+ merge requests',
+      'Solely responsible for developing and integrating ID verification functionality, such as OCR and barcode scanning, that reduced fraud rates in online banking applications',
+      'Became familiar with industry tools, such as: <span class="primary-color">Spring/Guice, Maven, Git, and Google Cloud Platform</span>',
+    ],
+  },
+  {
+    company: 'Company',
+    position: 'President',
+    website: 'http://company.com',
+    startDate: 'Jan 2018',
+    endDate: 'Apr 2018',
+    summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+    highlights: [
+      'Optimized the existing code base and introduced new product features to enhance the efficiency and value proposition of our core product',
+      'Developed expertise in Java for enterprise applications with over 1000+ individual contributions and 75+ merge requests',
+      'Solely responsible for developing and integrating ID verification functionality, such as OCR and barcode scanning, that reduced fraud rates in online banking applications',
+      'Became familiar with industry tools, such as: <span class="primary-color">Spring/Guice, Maven, Git, and Google Cloud Platform</span>',
+    ],
+  },
+  {
+    company: 'Company2',
+    position: 'President',
+    website: 'http://company.com',
+    startDate: 'Jan 2018',
+    endDate: 'Apr 2018',
+    summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+    highlights: [
+      'Optimized the existing code base and introduced new product features to enhance the efficiency and value proposition of our core product',
+      'Developed expertise in Java for enterprise applications with over 1000+ individual contributions and 75+ merge requests',
+      'Solely responsible for developing and integrating ID verification functionality, such as OCR and barcode scanning, that reduced fraud rates in online banking applications',
+      'Became familiar with industry tools, such as: <span class="primary-color">Spring/Guice, Maven, Git, and Google Cloud Platform</span>',
+    ],
+  },
+  {
+    company: 'Company4',
+    position: 'President',
+    website: 'http://company.com',
+    startDate: 'Jan 2018',
+    endDate: 'Apr 2018',
+    summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+    highlights: [
+      'Optimized the existing code base and introduced new product features to enhance the efficiency and value proposition of our core product',
+      'Developed expertise in Java for enterprise applications with over 1000+ individual contributions and 75+ merge requests',
+      'Solely responsible for developing and integrating ID verification functionality, such as OCR and barcode scanning, that reduced fraud rates in online banking applications',
+      'Became familiar with industry tools, such as: <span class="primary-color">Spring/Guice, Maven, Git, and Google Cloud Platform</span>',
+    ],
+  },
+];

@@ -7,15 +7,15 @@
       <AboutMeSection v-bind="aboutMeSectionData"/>
     </PortfolioSectionWrapper>
     <PortfolioSectionWrapper>
-      <ExperienceSection/>
+      <ExperienceSection v-bind="experienceSectionData"/>
     </PortfolioSectionWrapper>
     <PortfolioSectionWrapper>
-      <ProjectsSection/>
+      <ProjectsSection v-bind="projectsSectionData"/>
     </PortfolioSectionWrapper>
     <PortfolioSectionWrapper>
-      <ContactSection/>
+      <ContactSection v-bind="contactSectionData"/>
     </PortfolioSectionWrapper>
-    <FooterSection/>
+    <FooterSection v-bind="footerSectionData"/>
   </div>
 </template>
 
@@ -33,9 +33,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PortfolioSectionWrapper from '@/components/PortfolioSectionWrapper.vue';
 
-// Install BootstrapVue
+// Bootstrap init
 Vue.use(BootstrapVue);
-// Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
 
 export default {
@@ -51,14 +50,39 @@ export default {
         name: profileData.name,
         keyPhrase: profileData.keyPhrase,
         summary: profileData.summary,
-        socialProfiles: profileData.profiles,
-        ctas: profileData.ctas,
+        socialProfiles: profileData.socialProfiles,
+        ctas: this.appData.ctas,
       };
     },
     aboutMeSectionData() {
+      const profileData = this.appData.profile;
       return {
-        personalProfile: this.appData.profile.personalProfile,
-        highlights: this.appData.profile.highlights,
+        profileImage: profileData.profileImage,
+        personalProfile: profileData.personalProfile,
+        highlights: profileData.highlights,
+      };
+    },
+    experienceSectionData() {
+      return {
+        experienceItems: this.appData.experience,
+      };
+    },
+    projectsSectionData() {
+      return {
+        projects: this.appData.projects,
+        moreProjectsLink: this.appData.moreProjectsLink,
+      };
+    },
+    contactSectionData() {
+      return {
+        contactLinks: this.appData.contactLinks,
+        contactDescription: this.appData.contactDescription,
+      };
+    },
+    footerSectionData() {
+      return {
+        name: this.appData.profile.name,
+        socialProfiles: this.appData.profile.socialProfiles,
       };
     },
   },
@@ -72,6 +96,7 @@ export default {
     ProjectsSection,
   },
   created() {
+    // Initialize scrolling animations
     AOS.init();
   },
 };

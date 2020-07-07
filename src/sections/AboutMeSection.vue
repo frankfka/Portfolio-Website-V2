@@ -21,18 +21,13 @@
 </template>
 
 <script>
-import ProfileImage from '@/assets/personal-image.png';
 import BaseListItem from '@/components/BaseListItem.vue';
 
 export default {
   name: 'AboutMeSection',
   components: { BaseListItem },
-  data() {
-    return {
-      profileImage: ProfileImage,
-    };
-  },
   props: {
+    profileImage: String,
     personalProfile: {
       type: String,
       required: true,

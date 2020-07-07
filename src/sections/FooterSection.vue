@@ -2,13 +2,13 @@
 <div id="footer-section">
   <BRow align-h="around" align-v="center" no-gutters>
     <p>
-      Designed & Built by Frank Jia
+      Designed & Built by {{ name }}
     </p>
     <BRow align-h="end" no-gutters id="footer-section-profiles">
       <IconLink
-        v-for="profile in profiles" :key="profile.url"
+        v-for="profile in socialProfiles" :key="profile.url"
         :href="profile.url" :icon-name="profile.iconName"
-        class="ml-3"
+        class="mx-2"
       />
     </BRow>
   </BRow>
@@ -21,27 +21,16 @@ import IconLink from '@/components/IconLink.vue';
 export default {
   name: 'FooterSection',
   components: { IconLink },
-  data() {
-    return {
-      profiles: [
-        {
-          iconName: 'github',
-          url: 'https://github.com/frankfka',
-        },
-        {
-          iconName: 'linkedin',
-          url: 'https://www.linkedin.com/in/jiafrank/',
-        },
-        {
-          iconName: 'medium',
-          url: 'https://medium.com/@frankjia',
-        },
-        {
-          iconName: 'email',
-          url: 'mailto:jiafrank98@gmail.com',
-        },
-      ],
-    };
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+    socialProfiles: {
+      type: Array,
+      required: true,
+      validator: (prop) => prop.every((e) => e.iconName && e.name && e.url),
+    },
   },
 };
 </script>
