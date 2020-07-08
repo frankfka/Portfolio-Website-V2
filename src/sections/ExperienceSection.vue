@@ -49,7 +49,12 @@ export default {
   components: { BaseListItem },
   methods: {
     getTabTitle(experience) {
-      return experience.company.replace(/\s+/g, '\u00a0'); // Disallow space breaks
+      // Default to company
+      let title = experience.company;
+      if (experience.title) {
+        title = experience.title;
+      }
+      return title.replace(/\s+/g, '\u00a0'); // Disallow space breaks
     },
   },
   data() {

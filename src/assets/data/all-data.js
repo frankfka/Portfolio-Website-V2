@@ -3,13 +3,18 @@ import ExperienceData from './experience-data';
 import ProjectsData from './projects-data';
 
 export default {
-  // Invariant Data
+
+  /*
+  General profile data
+   */
 
   profile: ProfileData,
   experience: ExperienceData,
   projects: ProjectsData,
 
-  // Website specific properties
+  /*
+  Website design specific data
+   */
 
   // Buttons on intro section
   ctas: [
@@ -22,23 +27,21 @@ export default {
     },
   ],
   // Button on projects section
-  moreProjectsLink: '',
+  moreProjectsLink: 'https://github.com/frankfka',
   // Contact section
   contactDescription: `
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-      Ipsum has been the industry's standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-      It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged.
+    Whether you have a question about a recent blog post or just want to say hi, my inbox
+    is always open. Feel free to send me an email or connect via LinkedIn. I look forward to
+    hearing from you!
   `,
   contactLinks: [
     {
       label: 'Email',
-      url: 'asd',
+      url: 'mailto:jiafrank98@gmail.com',
     },
     {
       label: 'LinkedIn',
-      url: 'saf',
+      url: 'https://www.linkedin.com/in/jiafrank/',
     },
   ],
 };

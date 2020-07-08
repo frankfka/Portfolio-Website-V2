@@ -31,7 +31,7 @@
       <BRow no-gutters align-h="end" align-v="center" id="project-icon-links">
         <IconLink
           v-for="link in project.links" :key="link.url"
-          :href="link.url" :icon-name="link.iconName"
+          :url="link.url" :icon-name="link.iconName"
           class="project-icon-link ml-3"
         />
       </BRow>
@@ -39,7 +39,7 @@
   </BCard>
   <!--More projects button-->
   <div class="text-center">
-    <BaseButton :href="moreProjectsLink" outlined label="More Projects on Github"/>
+    <BaseButton :url="moreProjectsLink" outlined label="More Projects on Github"/>
   </div>
 </div>
 </template>

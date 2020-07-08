@@ -1,5 +1,5 @@
 <template>
-<a :href="href" target="_blank">
+<a :href="url" target="_blank">
   <BaseIcon :icon-name="iconName"/>
 </a>
 </template>
@@ -11,7 +11,7 @@ export default {
   name: 'IconLink',
   components: { BaseIcon },
   props: {
-    href: String,
+    url: String,
     iconName: {
       type: String,
       required: true,

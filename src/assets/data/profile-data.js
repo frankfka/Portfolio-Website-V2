@@ -4,27 +4,35 @@ export default {
   name: 'Frank Jia',
   profileImage: ProfileImage,
   keyPhrase: 'I\'m a business-minded full-stack software engineer.',
-  summary: 'As an engineering student based in Vancouver, Canada, I have developed and maintained both frontend and backend production software. Outside of work, I am a fitness enthusiast passionate about maintaining an active and healthy lifestyle.',
+  summary: `
+  As an engineering student based in Vancouver, Canada, I have developed and maintained both
+  frontend and backend production software. Outside of work, I am a fitness enthusiast passionate
+  about maintaining an active and healthy lifestyle.
+  `,
   personalProfile: `
         <p>
-          Hello! I'm Frank Jia, a mobile app developer,
-          problem solver, and fitness enthusiast. <br><br>
-          I am a fourth year <a href="http://www.engphys.ubc.ca/" target="_blank">Engineering
-          Physics</a> student at UBC, which is a blend of Software Engineering &amp; Mechatronics.
+          Hello! I'm Frank Jia. I am a business-minded and entrepreneurial full-stack software
+           engineer currently located in Vancouver, Canada.
           <br><br>
-          Although I keep myself busy with school, I exercise on a daily basis and am committed to
-          maintaining my health with whole foods. <br><br>
-          I love learning new technologies and creating value through software. I have experience
-          with:
+          I am a fifth year <a href="http://www.engphys.ubc.ca/" target="_blank">Engineering
+          Physics</a> student at UBC, which is a blend of Software Engineering &amp; Mechatronics.
+          I'm also pursing a minor in commerce, as I believe that understanding business value
+          creation will help me become a better software engineer.
+          <br><br>
+          Although I'm busy with school and personal projects, I strive to exercise on a daily basis
+          and am committed to maintaining my mental &amp; physical health with whole foods.
+          <br><br>
+          I am driven to learn new technologies and improve existing ones. I enjoy creating
+          value through my experience with software development. I have gathered expertise in:
         </p>
       `,
   highlights: [
-    'Backend development in Java/Kotlin/Golang/NodeJS',
+    'Backend development in Java, Kotlin, Golang, Python, and Javascript',
+    'Native mobile development for both Android & iOS',
+    'Web development with Javascript, HTML, and CSS',
     'Machine learning in Python (Mainly NLP)',
-    'Mobile development in Kotlin/Swift',
     'Methodologies such as Redux/Reactive Programming',
-    'Web development in React/Native HTML/CSS',
-    'Cloud infrastructure in AWS/GCP',
+    'Cloud infrastructure using Docker and Kubernetes on AWS/GCP',
   ],
   socialProfiles: [
     {

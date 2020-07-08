@@ -6,7 +6,7 @@
       <BaseButton
         outlined size="lg" class="mx-3"
         v-for="contact in contactLinks" :key="contact.url"
-        :label="contact.label" :href="contact.url"
+        :label="contact.label" :url="contact.url"
       />
     </BRow>
   </div>

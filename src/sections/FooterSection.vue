@@ -7,7 +7,7 @@
     <BRow align-h="end" no-gutters id="footer-section-profiles">
       <IconLink
         v-for="profile in socialProfiles" :key="profile.url"
-        :href="profile.url" :icon-name="profile.iconName"
+        :url="profile.url" :icon-name="profile.iconName"
         class="mx-2"
       />
     </BRow>
