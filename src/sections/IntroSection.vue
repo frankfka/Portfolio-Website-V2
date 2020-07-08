@@ -1,6 +1,7 @@
 <template>
   <div class="text-center">
     <div class="text-center">
+      <img :src="brandImage" alt="Brand Image" class="mb-5" id="intro-brand-img">
       <!--Intro text section -->
       <h1 class="mb-3">Hi! I'm {{ name }}.</h1>
       <h3 class="mb-3 primary-color">{{ keyPhrase }}</h3>
@@ -37,6 +38,10 @@ export default {
       type: String,
       required: true,
     },
+    brandImage: {
+      type: String,
+      required: true,
+    },
     keyPhrase: {
       type: String,
       required: true,
@@ -60,6 +65,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#intro-brand-img {
+  width: 128px;
+}
 #intro-summary {
   @media (min-width: map-get($grid-breakpoints, lg)) {
     // Prevent text from being too wide on large screens

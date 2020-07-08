@@ -1,7 +1,9 @@
 import ProfileImage from '@/assets/personal-image.png';
+import BrandImage from '@/assets/brand-image.svg';
 
 export default {
   name: 'Frank Jia',
+  brandImage: BrandImage,
   profileImage: ProfileImage,
   keyPhrase: 'I\'m a business-minded full-stack software engineer.',
   summary: `

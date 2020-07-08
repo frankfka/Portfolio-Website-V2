@@ -48,6 +48,7 @@ export default {
       const profileData = this.appData.profile;
       return {
         name: profileData.name,
+        brandImage: profileData.brandImage,
         keyPhrase: profileData.keyPhrase,
         summary: profileData.summary,
         socialProfiles: profileData.socialProfiles,
