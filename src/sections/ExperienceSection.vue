@@ -68,13 +68,9 @@ export default {
       required: true,
       validator(items) {
         return items.every((item) => {
-          let highlightsIsValid = false;
-          if (
-            Array.isArray(item.highlights) && item.highlights.length > 0
-            && item.highlights.every((highlight) => typeof highlight === 'string')
-          ) {
-            highlightsIsValid = true;
-          }
+          const highlightsIsValid = Array.isArray(item.highlights)
+            && item.highlights.length > 0
+            && item.highlights.every((highlight) => typeof highlight === 'string');
           return highlightsIsValid
             && typeof item.company === 'string'
             && typeof item.position === 'string'

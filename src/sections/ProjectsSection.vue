@@ -26,12 +26,21 @@
     <!--Expandable content-->
     <BCollapse :id="'project-collapse-' + index" class="project-item-content">
       <!--Project description-->
-      <div v-html="project.description" class="mb-3"/>
+      <p v-html="project.description" class="mb-3"/>
+      <!--Highlights-->
+      <ul>
+        <li
+          class="mb-1"
+          v-for="highlight in project.highlights"
+          :key="highlight" is="base-list-item"
+          v-html="highlight"
+        />
+      </ul>
       <!--Associated links-->
       <BRow no-gutters align-h="end" align-v="center" id="project-icon-links">
-        <IconLink
+        <TextIconLink
           v-for="link in project.links" :key="link.url"
-          :url="link.url" :icon-name="link.iconName"
+          :url="link.url" :icon-name="link.iconName" :name="link.name"
           class="project-icon-link ml-3"
         />
       </BRow>
@@ -46,11 +55,12 @@
 
 <script>
 import BaseButton from '@/components/BaseButton.vue';
-import IconLink from '@/components/IconLink.vue';
+import TextIconLink from '@/components/TextIconLink.vue';
+import BaseListItem from '@/components/BaseListItem.vue';
 
 export default {
   name: 'ProjectsSection',
-  components: { IconLink, BaseButton },
+  components: { BaseListItem, TextIconLink, BaseButton },
   methods: {
     getKeywordsDescription(project) {
       return project.keywords.join(', ');
@@ -62,12 +72,19 @@ export default {
       required: true,
       validator(projects) {
         return projects.every((project) => {
+          const highlightsIsValid = Array.isArray(project.highlights)
+            && project.highlights.length > 0
+            && project.highlights.every((highlight) => typeof highlight === 'string');
           const linksAreValid = Array.isArray(project.links)
             && project.links
-              .every((link) => typeof link.iconName === 'string' && typeof link.url === 'string');
+              .every(
+                (link) => typeof link.iconName === 'string'
+                && typeof link.url === 'string'
+                && typeof link.name === 'string',
+              );
           const keyWordsAreValid = Array.isArray(project.keywords)
             && project.keywords.every((keyword) => typeof keyword === 'string');
-          return linksAreValid && keyWordsAreValid
+          return linksAreValid && keyWordsAreValid && highlightsIsValid
             && typeof project.name === 'string' && typeof project.description === 'string'
             && typeof project.icon === 'string';
         });
@@ -99,8 +116,5 @@ $project-card-padding: 1em;
 }
 #project-icon-links {
   @include text-link($color-text-light);
-}
-.project-icon-link {
-  font-size: 1.5em; // For icon sizing
 }
 </style>

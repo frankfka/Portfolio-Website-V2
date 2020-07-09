@@ -9,7 +9,7 @@
     </div>
     <!--Row of social profile icons-->
     <BRow align-v="center" align-h="center" class="mb-3">
-      <ProfileIconLink
+      <TextIconLink
         v-bind="profile" v-for="profile in socialProfiles" :key="profile.url"
         class="mx-3"
       />
@@ -27,12 +27,12 @@
 </template>
 
 <script>
-import ProfileIconLink from '@/components/ProfileIconLink.vue';
+import TextIconLink from '@/components/TextIconLink.vue';
 import BaseButton from '@/components/BaseButton.vue';
 
 export default {
   name: 'IntroSection',
-  components: { BaseButton, ProfileIconLink },
+  components: { BaseButton, TextIconLink },
   props: {
     name: {
       type: String,
