@@ -33,6 +33,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PortfolioSectionWrapper from '@/components/PortfolioSectionWrapper.vue';
 
+// TODO: https://cli.vuejs.org/guide/deployment.html#github-pages
+// TODO: Google analytics
+
 // Bootstrap init
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
