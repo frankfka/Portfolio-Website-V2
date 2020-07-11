@@ -100,7 +100,6 @@ export default {
     // Initialize scrolling animations
     AOS.init({
       disable: 'mobile',
-      delay: 250,
       duration: 1000,
     });
   },
