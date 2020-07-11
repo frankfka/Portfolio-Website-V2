@@ -28,16 +28,9 @@
       <!--Project description-->
       <p v-html="project.description" class="mb-3"/>
       <!--Highlights-->
-      <ul>
-        <li
-          class="mb-1"
-          v-for="highlight in project.highlights"
-          :key="highlight" is="base-list-item"
-          v-html="highlight"
-        />
-      </ul>
+      <BaseList :items="project.highlights"/>
       <!--Associated links-->
-      <BRow no-gutters align-h="end" align-v="center" id="project-icon-links">
+      <BRow no-gutters align-h="start" align-v="center" id="project-icon-links">
         <TextIconLink
           v-for="link in project.links" :key="link.url"
           :url="link.url" :icon-name="link.iconName" :name="link.name"
@@ -56,11 +49,11 @@
 <script>
 import BaseButton from '@/components/BaseButton.vue';
 import TextIconLink from '@/components/TextIconLink.vue';
-import BaseListItem from '@/components/BaseListItem.vue';
+import BaseList from '@/components/BaseList.vue';
 
 export default {
   name: 'ProjectsSection',
-  components: { BaseListItem, TextIconLink, BaseButton },
+  components: { BaseList, TextIconLink, BaseButton },
   methods: {
     getKeywordsDescription(project) {
       return project.keywords.join(', ');

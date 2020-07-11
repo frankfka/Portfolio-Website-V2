@@ -33,10 +33,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PortfolioSectionWrapper from '@/components/PortfolioSectionWrapper.vue';
 
-// TODO: https://cli.vuejs.org/guide/deployment.html#github-pages
-// TODO: disable aos for mobile
-// TODO: mobile appearance
-
 // Bootstrap init
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
@@ -102,10 +98,11 @@ export default {
   },
   created() {
     // Initialize scrolling animations
-    AOS.init();
+    AOS.init({
+      disable: 'mobile',
+      delay: 250,
+      duration: 1000,
+    });
   },
 };
 </script>
-
-<style lang="scss">
-</style>

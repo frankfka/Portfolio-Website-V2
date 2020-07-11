@@ -33,9 +33,9 @@ export default [
     `,
     highlights: [
       'Led and accelerated the completion of mobile travel booking workflows for the Concur iOS (Swift) and Android (Kotlin) apps',
-      'Implemented a UI testing workflow for the next-generation Concur iOS and Android apps',
+      'Implemented a UI testing workflow for the next-generation Concur mobile apps',
       'Managed feature development and devops pipeline for a backend Golang microservice that serves location data',
-      'Created a workflow to deploy our microservice to new production AWS environments',
+      'Created a workflow through AWS Cloudformation and Codebuild to deploy our microservice to new production AWS environments',
       'Designed and implemented an automated data loading and replication process with AWS Elasticsearch, S3, and Lambda Step Functions',
     ],
   },
@@ -52,8 +52,8 @@ export default [
       term, I spearheaded the development of a microservice to identify fraudulent banking applications.
     `,
     highlights: [
-      'Maintained operations and developed new functionality for a production Java backend',
-      'Solely responsible for developing and integrating a microservice for ID verification, using technologies such as OCR and barcode scanning, that reduced fraud rates in online banking applications',
+      'Maintained operations and developed new functionality for a production Java Spring backend',
+      'Solely responsible for developing and integrating a microservice for ID verification, using technologies such as OCR and barcode recognition, that reduced fraud rates in online banking applications',
       'Gathered experience in debugging Google Cloud Platform services that handled sensitive customer data',
       'Collaborated with front-end and business analytics teams to identify areas of potential value creation for the company',
     ],

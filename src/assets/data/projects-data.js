@@ -78,9 +78,9 @@ export default [
       to place within the top 10 contestants to proceed onto phase 2 of the competition.
     `,
     highlights: [
-      'Preprocessed messy text input using industry-standard libraries such as SpaCy and NLTK',
+      'Preprocessed HTML from online articles into clean text data using industry-standard libraries such as BS4, SpaCy and NLTK',
       'Used Keras, Pytorch, and Tensorflow to create and test a variety of ML architectures, including LSTMs. CNNs, and Transformers',
-      'Created an end to end dockerized pipeline for running the machine learning algorithm',
+      'Created an end to end dockerized pipeline for running the machine learning algorithm to help identify fake news',
     ],
     keywords: ['Python', 'ML', 'NLP'],
     links: [
@@ -104,7 +104,7 @@ export default [
       'Responsible for designing, developing, and deploying a secure full-stack software service',
       'The customer-facing mobile apps were built with Swift for iOS and Kotlin for Android',
       'The vendor-facing web dashboard (for managing product names and prices) was written using ReactJS',
-      'Our Ruby backend integrated with the Stripe API to process payments',
+      'Our Ruby backend, hosted on Google Cloud, integrated with the Stripe API to process payments',
       'Google Firebase was used for user authentication and as a database',
     ],
     keywords: ['Swift', 'Kotlin', 'Ruby', 'Google Cloud'],

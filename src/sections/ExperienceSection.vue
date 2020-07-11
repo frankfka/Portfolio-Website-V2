@@ -28,25 +28,18 @@
       <!--HTML Summary-->
       <p class="mb-3" v-html="experience.summary"/>
       <!--Highlights-->
-      <ul>
-        <li
-          class="mb-1"
-          v-for="highlight in experience.highlights"
-          :key="highlight" is="base-list-item"
-          v-html="highlight"
-        />
-      </ul>
+      <BaseList :items="experience.highlights"/>
     </BTab>
   </BTabs>
 </div>
 </template>
 
 <script>
-import BaseListItem from '@/components/BaseListItem.vue';
+import BaseList from '@/components/BaseList.vue';
 
 export default {
   name: 'ExperienceSection',
-  components: { BaseListItem },
+  components: { BaseList },
   methods: {
     getTabTitle(experience) {
       // Default to company

@@ -6,10 +6,7 @@
         <h2 class="text-center text-md-left mb-3">About Me</h2>
         <div v-html="personalProfile" class="mb-3 about-me-text-summary"/>
         <div class="highlights mb-3">
-          <ul>
-            <li v-for="highlight in highlights"
-                :key="highlight" is="base-list-item">{{ highlight }}</li>
-          </ul>
+          <BaseList :items="highlights"/>
         </div>
       </BCol>
       <!--Column for face image-->
@@ -21,11 +18,11 @@
 </template>
 
 <script>
-import BaseListItem from '@/components/BaseListItem.vue';
+import BaseList from '@/components/BaseList.vue';
 
 export default {
   name: 'AboutMeSection',
-  components: { BaseListItem },
+  components: { BaseList },
   props: {
     profileImage: String,
     personalProfile: {
