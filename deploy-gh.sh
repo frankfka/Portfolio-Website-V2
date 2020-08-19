@@ -18,7 +18,7 @@ yarn build
 cd dist
 
 # Init custom domain
-echo 'www.jiafrank.com' > CNAME
+echo 'jiafrank.com' > CNAME
 
 # Commit to the GH Pages repo
 git init
