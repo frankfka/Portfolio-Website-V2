@@ -1,11 +1,25 @@
 export default [
   {
-    title: 'SAP Concur (Contract)',
+    title: 'Shopify',
+    company: 'Shopify',
+    position: 'iOS Developer Intern',
+    website: 'https://www.shopify.ca/',
+    startDate: 'Sept 2020',
+    endDate: 'Present',
+    summary: `
+      I am a current iOS developer intern on Shopify's mobile stewardship team. We are
+      responsible for the foundational components of Shopify's iOS application, such as the
+      UI design components and application networking.
+    `,
+    highlights: [],
+  },
+  {
+    title: 'SAP Concur (2)',
     company: 'SAP Concur',
     position: 'Contract Software Engineer',
     website: 'https://www.concur.ca/',
     startDate: 'May 2020',
-    endDate: 'Present',
+    endDate: 'Sept 2020',
     summary: `
       I returned to SAP Concur for a summer work term after having my internship cancelled as a result
       of the COVID-19 pandemic. I was responsible for maintaining a high-load production service
@@ -18,7 +32,7 @@ export default [
     ],
   },
   {
-    title: 'SAP Concur (Intern)',
+    title: 'SAP Concur (1)',
     company: 'SAP Concur',
     position: 'Software Engineer Intern',
     website: 'https://www.concur.ca/',

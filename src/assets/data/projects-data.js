@@ -75,7 +75,8 @@ export default [
       The goal was to build artificial intelligence capable of identifying fake news.
       The grand prize for the competition is $1M CAD. This competition served
       as an introduction into the realm of machine learning. I was both surprised and excited
-      to place within the top 10 contestants to proceed onto phase 2 of the competition.
+      to place within the top 10 contestants to proceed onto phase 2 of the competition. I finished
+      5th place overall at the end of phase 2.
     `,
     highlights: [
       'Preprocessed HTML from online articles into clean text data using industry-standard libraries such as BS4, SpaCy and NLTK',
