@@ -7,11 +7,16 @@ export default [
     startDate: 'Sept 2020',
     endDate: 'Present',
     summary: `
-      I am a current iOS developer intern on Shopify's mobile stewardship team. We are
-      responsible for the foundational components of Shopify's iOS application, such as the
+      As an iOS developer intern on the Core Mobile team at Shopify, I played an integral part
+      in ensuring the present and future success of the Shopify iOS application. Our team is
+      responsible for the foundational components of the Shopify mobile app, such as the
       UI design components and application networking.
     `,
-    highlights: [],
+    highlights: [
+      'Responsible for the implementation of a thread-safe websocket client for Shopify Mobile',
+      'Helped to explore the integration of React Native workflows within our Swift iOS codebase',
+      'Ensured the success of our application with routine bug fixes and the management of our app release process',
+    ],
   },
   {
     title: 'SAP Concur (2)',
