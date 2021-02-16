@@ -99,7 +99,6 @@ export default {
   created() {
     // Initialize scrolling animations
     AOS.init({
-      disable: 'mobile',
       duration: 1000,
     });
   },
