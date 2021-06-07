@@ -5,7 +5,7 @@ export default [
     position: 'iOS Developer Intern',
     website: 'https://www.shopify.ca/',
     startDate: 'Sept 2020',
-    endDate: 'Present',
+    endDate: 'May 2021',
     summary: `
       As an iOS developer intern on the Core Mobile team at Shopify, I played an integral part
       in ensuring the present and future success of the Shopify iOS application. Our team is
